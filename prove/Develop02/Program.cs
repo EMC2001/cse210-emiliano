@@ -7,5 +7,8 @@ class Program
         Entry journalEntry = new Entry();
         journalEntry.CreateJournalEntry();
         journalEntry.DisplayJournalEntry();
+
+        Journal myJournal = new Journal();
+        myJournal.AddJournalEntry(journalEntry);
     }
 }
