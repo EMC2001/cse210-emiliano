@@ -17,9 +17,11 @@ class Entry
     public void CreateJournalEntry()
     {
         _date = DateTime.Now.ToShortDateString();
-        Console.WriteLine(_prompts[0]);
+        Random random = new Random();
+        int randomPrompt = random.Next(_prompts.Length);
+        Console.WriteLine(_prompts[randomPrompt]);
         _response = Console.ReadLine();
-        _prompt = _prompts[0];
+        _prompt = _prompts[randomPrompt];
     }
 
     public void DisplayJournalEntry()
