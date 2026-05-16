@@ -36,6 +36,8 @@ class Menu
             else if (userChoice == "4")
             {
                 Journal.SaveJournal(myJournal._entries);
+                Console.WriteLine("Your journal has been saved!");
+                Console.Clear();
             }
 
             else if (userChoice == "5")

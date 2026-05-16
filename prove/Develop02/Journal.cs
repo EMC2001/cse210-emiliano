@@ -28,7 +28,7 @@ class Journal
         {
             foreach (Entry entry in entries)
             {
-                outputFile.WriteLine(fileName);
+                outputFile.WriteLine(entry.CreateFileSystemString());
             }
         }
     }
