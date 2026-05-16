@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 class Journal
 {
-    List<Entry> _entries = new List<Entry>();
+    public List<Entry> _entries = new List<Entry>();
 
     public void AddJournalEntry(Entry journalEntry)
     {
@@ -15,6 +16,20 @@ class Journal
         foreach (Entry entry in _entries)
         {
             entry.DisplayJournalEntry();
+        }
+    }
+
+    public static void SaveJournal(List<Entry> entries)
+    {
+        Console.WriteLine("What would you like to name your file?");
+        string fileName = Console.ReadLine() + ".txt";
+
+        using(StreamWriter outputFile = new StreamWriter(fileName))
+        {
+            foreach (Entry entry in entries)
+            {
+                outputFile.WriteLine(fileName);
+            }
         }
     }
 }

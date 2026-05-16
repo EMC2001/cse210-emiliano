@@ -33,6 +33,11 @@ class Menu
                 myJournal.DisplayJournal();
             }
 
+            else if (userChoice == "4")
+            {
+                Journal.SaveJournal(myJournal._entries);
+            }
+
             else if (userChoice == "5")
             {
                 break;
