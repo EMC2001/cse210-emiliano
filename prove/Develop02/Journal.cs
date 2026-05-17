@@ -32,4 +32,19 @@ class Journal
             }
         }
     }
+
+    public static List<Entry> LoadJournal()
+    {
+        Console.WriteLine("What File would you like to load?");
+        string fileName = Console.ReadLine() + ".txt";
+
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+        }
+
+        return new List<Entry>();
+    }
 }
