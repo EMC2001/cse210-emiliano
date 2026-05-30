@@ -15,6 +15,11 @@ class Program
         {
             Console.WriteLine(myWord.GetWordString());
         }
+
+        Scripture myScripture = new Scripture();
+        Console.WriteLine(myScripture.GetScripture());
+
+
     }
 
 }
