@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        Console.Clear();
         Word myWord = new Word("Hello");
         Console.WriteLine(myWord.GetWordString());
 
@@ -15,6 +17,9 @@ class Program
         {
             Console.WriteLine(myWord.GetWordString());
         }
+
+        Reference myVerse = new Reference("Alma", 26, 11, 12);
+        Console.WriteLine(myVerse.GetReference());
 
         Scripture myScripture = new Scripture();
         Console.WriteLine(myScripture.GetScripture());
