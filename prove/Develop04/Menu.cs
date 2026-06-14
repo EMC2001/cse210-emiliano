@@ -15,17 +15,20 @@ class Menu
 
             if (userChoice == "1")
             {
-                Activity breathingActivity = new Activity("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
-                Console.WriteLine(breathingActivity.GetActivity());
-
+                Breathing breathing = new Breathing();
+                Console.WriteLine(breathing.GetActivity());
             }
 
             else if (userChoice == "2")
             {
+                Reflecting reflecting = new Reflecting();
+                Console.WriteLine(reflecting.GetActivity());
             }
 
             else if (userChoice == "3")
             {
+                Listing listing = new Listing();
+                Console.WriteLine(listing.GetActivity());
             }
 
             else if (userChoice == "4")
