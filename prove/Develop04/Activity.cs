@@ -1,16 +1,38 @@
+using System;
+using System.Threading;
+
 class Activity
 {
-    private string _activityDescription;
+    private string _startMessage;
+    private string _description;
+    private int _timer;
 
-    public Activity(string activityDescription)
+    public Activity(string startMessage, string description)
     {
-        _activityDescription = activityDescription;
+        _startMessage = startMessage;
+        _description = description;
     }
 
-    public string GetActivity()
+    public string GetStartMessage()
     {
-        return $"{_activityDescription}";
+        return $"{_startMessage}";
     }
 
-        
+    public string GetDescription()
+    {
+        return $"{_description}";
+    }
+
+    public void SetTimerDuration()
+    {
+        Console.WriteLine("How long in seconds, in seconds, would you like for your session?");
+        _timer = int.Parse(Console.ReadLine());
+    }
+
+    public int Timer()
+    {
+        return _timer;
+    }
+
+
 }
