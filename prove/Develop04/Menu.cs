@@ -15,7 +15,10 @@ class Menu
 
             if (userChoice == "1")
             {
-                Breathing breathing = new Breathing("Welcome to the Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
+                Breathing breathing = new Breathing();
+                breathing.GetStartMessage();
+                breathing.GetDescription();
+                breathing.BreathingActivity();
             }
 
             else if (userChoice == "2")
