@@ -34,7 +34,7 @@ class Activity
 
     public void SetTimerDuration()
     {
-        Console.WriteLine("How long in seconds, would you like for your session?");
+        Console.WriteLine("How long in seconds, would you like for your session to be?");
         _timer = int.Parse(Console.ReadLine());
     }
 
@@ -52,7 +52,7 @@ class Activity
         {
             Console.Write($"{count--,2}");
             Thread.Sleep(1000);
-            Console.Write("\b\b");
+            Console.Write("\b \b");
         }
 
         Console.Write("  ");
