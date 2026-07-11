@@ -5,12 +5,14 @@ class Activity
 {
     private string _startMessage;
     private string _description;
+    private string _endMessage;
     private int _timer;
 
-    public Activity(string startMessage, string description)
+    public Activity(string startMessage, string description, string endMessage)
     {
         _startMessage = startMessage;
         _description = description;
+        _endMessage = endMessage;
     }
 
     public string GetStartMessage()
@@ -23,6 +25,11 @@ class Activity
         return $"{_description}";
     }
 
+    public string GetEndMessage()
+    {
+        return $"{_endMessage}";
+    }
+
     public void DisplayStartingMessage()
     {
         Console.WriteLine(GetStartMessage());
@@ -30,6 +37,11 @@ class Activity
         Console.WriteLine(GetDescription());
         Console.WriteLine();
         SetTimerDuration();
+    }
+
+    public void DisplayEndMessage()
+    {
+        Console.WriteLine(GetEndMessage());
     }
 
     public void SetTimerDuration()

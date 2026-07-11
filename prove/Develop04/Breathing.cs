@@ -1,6 +1,6 @@
 class Breathing : Activity
 {
-    public Breathing() : base ("Welcome to the Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.")
+    public Breathing() : base ("Welcome to the Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.", "Good Job!")
     {
         
     }
@@ -19,6 +19,9 @@ class Breathing : Activity
             ShowCountDown(3);
             Console.WriteLine();
         }
+
+        Console.WriteLine();
+        DisplayEndMessage();
 
     }
 }
