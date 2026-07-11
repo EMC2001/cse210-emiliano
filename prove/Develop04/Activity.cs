@@ -64,10 +64,41 @@ class Activity
         {
             Console.Write($"{count--,2}");
             Thread.Sleep(1000);
+            Console.Write("\b \b \b\b");
+        }
+    }
+
+    public void ShowAnimation()
+    {
+    DateTime endTime = DateTime.Now.AddSeconds(6);
+
+    while (DateTime.Now < endTime)
+        {
+            Console.Write("\\");
+            Thread.Sleep(600);
+            Console.Write("\b \b");
+
+            Console.Write("|");
+            Thread.Sleep(600);
+            Console.Write("\b \b");
+
+            Console.Write("-");
+            Thread.Sleep(600);
+            Console.Write("\b \b");
+
+            Console.Write("/");
+            Thread.Sleep(600);
+            Console.Write("\b \b");
+
+            Console.Write("-");
+            Thread.Sleep(600);
+            Console.Write("\b \b");
+
+            Console.Write("|");
+            Thread.Sleep(600);
             Console.Write("\b \b");
         }
-
-        Console.Write("  ");
+        
     }
 
 }
