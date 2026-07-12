@@ -5,7 +5,6 @@ class Menu
         while (true)
         {
             Console.Clear();
-            Console.WriteLine();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Start Breathing activity");
             Console.WriteLine("2. Start Reflection activity");
@@ -32,6 +31,7 @@ class Menu
             {
                 Listing listing = new Listing();
                 Console.Clear();
+                listing.ListingActivity();
             }
 
             else if (userChoice == "4")

@@ -1,8 +1,8 @@
 class Reflecting : Activity
 {
-    string _prompt;
+    private string _prompt;
     string _question;
-    public Reflecting() : base ("Welcome to the Reflection Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", "Good Job!")
+    public Reflecting() : base ("Reflecting Activity", "Welcome to the Reflection Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", "Good Job!")
     {
         
     }
@@ -62,6 +62,7 @@ class Reflecting : Activity
             }
         }
 
-
+        Console.WriteLine();
+        DisplayEndMessage();
     }
 }

@@ -6,13 +6,20 @@ class Activity
     private string _startMessage;
     private string _description;
     private string _endMessage;
+    private string _activity;
     private int _timer;
 
-    public Activity(string startMessage, string description, string endMessage)
+    public Activity(string activity, string startMessage, string description, string endMessage)
     {
+        _activity = activity;
         _startMessage = startMessage;
         _description = description;
         _endMessage = endMessage;
+    }
+
+    public string GetActivity()
+    {
+        return $"{_activity}";
     }
 
     public string GetStartMessage()
@@ -39,15 +46,22 @@ class Activity
         SetTimerDuration();
     }
 
-    public void DisplayEndMessage()
-    {
-        Console.WriteLine(GetEndMessage());
-    }
-
     public void SetTimerDuration()
     {
         Console.WriteLine("How long in seconds, would you like for your session to be?");
         _timer = int.Parse(Console.ReadLine());
+    }
+
+    public string GetTimerEndMessage()
+    {
+        return $"You have completed {_timer} seconds of the {_activity}";
+    }
+
+    public void DisplayEndMessage()
+    {
+        Console.WriteLine(GetEndMessage());
+        Console.WriteLine(GetTimerEndMessage());
+        Thread.Sleep(5000);
     }
 
     public int Timer()
