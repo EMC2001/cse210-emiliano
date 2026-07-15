@@ -5,9 +5,9 @@ class Scripture
  private string _scripture;
  private List<Word> _words = new List<Word>();
 
- public Scripture()
+ public Scripture(string scripture)
  {
-    _scripture ="But Ammon said unto him: I do not boast in my own strength, nor in my own wisdom; but behold, my joy is full, yea, my heart is brim with joy, and I will rejoice in my God.";
+    _scripture = scripture;
 
     string[] pieces = _scripture.Split(' ');
 
@@ -18,9 +18,44 @@ class Scripture
 
  }
 
- public string GetScripture()
+public string GetScripture()
+{
+    string letter = "";
+
+    foreach (Word word in _words)
     {
-        return _scripture;
+        letter += word.GetWordString() + " ";
     }
+
+    return letter.Trim();
+}
+
+private Random _random = new Random();
+
+public void HideWords()
+{
+    int index;
+
+    do
+    {
+        index = _random.Next(_words.Count);
+    }
+    while (_words[index].isHidden());
+
+    _words[index].Hide();
+}
+
+public bool WordsHidden()
+{
+    foreach (Word word in _words)
+    {
+        if (!word.isHidden())
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
 
 }

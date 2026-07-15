@@ -36,8 +36,4 @@ class Word
         return _hidden;
     }
 
-    public void DisplayWord()
-    {
-        Console.WriteLine(GetWordString());
-    }
 }
