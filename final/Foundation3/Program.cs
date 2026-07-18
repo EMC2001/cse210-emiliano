@@ -37,7 +37,7 @@ class Program
                     "67 S 89st N",
                     "West Columbia",
                     "Texas",
-                    83440
+                    92914
                 );
 
                 Reception reception = new Reception(
@@ -49,7 +49,17 @@ class Program
             
             else if (userChoice == "3")
             {
-                
+                Address outdoorGatheringAddress = new Address(
+                    "379 S 922st N",
+                    "Independence",
+                    "Missouri",
+                    19213
+                );
+
+                OutdoorGathering outdoorGathering = new OutdoorGathering(
+                    "35% probablity of Thunder Storm", 
+                    outdoorGatheringAddress);
+                outdoorGathering.DisplayOutdoorGatheringInformation();    
             }
             
             else if (userChoice == "4")
