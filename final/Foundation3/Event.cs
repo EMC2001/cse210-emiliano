@@ -43,7 +43,7 @@ class Event
         return _address;
     }
 
-    public void DisplayEventInformation()
+    public void DisplayStandardDetails()
     {
         Console.WriteLine($"{_eventTitle}");
         Console.WriteLine($"{_description}");
