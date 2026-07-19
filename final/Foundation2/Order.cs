@@ -41,4 +41,25 @@ class Order
     {
         return AllProductsTotal()+ShippingCharge();
     }
+
+    public string PackingLabel()
+    {
+        string packingLabel = "";
+
+        foreach(Product product in _products)
+        {
+            packingLabel += $"Product Name: {product.GetProductName()} - Product ID:{product.GetProductID()}\n";
+        }
+
+        return packingLabel;
+    }
+
+    public string ShippingLabel()
+    {
+        string shippingLabel = "";
+
+            shippingLabel += $"{_customer.GetCustomerName()}\n{_customer.GetCustomerAddress().GetAddress()}";
+
+        return shippingLabel;
+    }
 }
