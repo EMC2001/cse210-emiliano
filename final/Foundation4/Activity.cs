@@ -44,6 +44,6 @@ class Activity
 
     public virtual string GetSummary()
     {
-        return $"{GetDate()} {GetActivity()} ({GetTime()} min)- Distance {GetDistance()} kilometers, Speed {GetSpeed()} kph, Pace {GetPace()} min per kilometer.";
+        return $"{GetDate()} {GetActivity()} ({GetTime()} min)- Distance {GetDistance()} kilometers, Speed {GetSpeed()} kph, Pace {GetPace()} min per kilometer.\n";
     }
 }
