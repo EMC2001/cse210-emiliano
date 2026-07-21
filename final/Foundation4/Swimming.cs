@@ -26,4 +26,9 @@ class Swimming : Activity
     {
         return (GetDistance()/GetTime() * 60);
     }
+
+    public override string GetActivity()
+    {
+        return "Swimming";
+    }
 }

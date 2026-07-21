@@ -22,4 +22,9 @@ class Running : Activity
         return GetTime()/GetDistance();
     }
 
+    public override string GetActivity()
+    {
+        return "Running";
+    }
+
 }

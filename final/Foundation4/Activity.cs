@@ -37,8 +37,13 @@ class Activity
         return _date;
     }
 
+    public virtual string GetActivity()
+    {
+        return "";
+    }
+
     public virtual string GetSummary()
     {
-        return $"{GetDate()} ({GetTime()} min)- Distance {GetDistance()} kilometers, Speed {GetSpeed()} kph, Pace {GetPace()} per kilometer.";
+        return $"{GetDate()} {GetActivity()} ({GetTime()} min)- Distance {GetDistance()} kilometers, Speed {GetSpeed()} kph, Pace {GetPace()} min per kilometer.";
     }
 }
