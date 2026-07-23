@@ -7,7 +7,7 @@ class SimpleGoal : Goal
 
     public override int RecordEvent()
     {
-        CompleteGoal();
+        GetCompletedGoal();
 
         return GetGoalPoints();
     }
